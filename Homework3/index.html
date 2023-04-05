@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Homework3</title>
+    <style>
+        table,th,td, caption {border: 1px solid grey;}
+     </style>
+</head>
+
+<body>
+
+    <!--зробити посилання на чати WhatsApp та Skype-->
+    <div>
+        <a href="https://www.whatsapp.com/?lang=ru"> Посилання на Whatsapp</a>
+    </div>
+    <div>
+        <a href="https://www.skype.com/ru/">Посилання на Skype</a>
+    </div>
+    <br>
+
+<!--посилання на файл, яке завантажить його-->
+    <div>
+        <a href="./download/Hello World.docx" download="./download/Hello World.docx">Файл для завантаження</a>
+    </div>
+    <br>
+
+    <!--створити html код, який додасть до картинки посилання на веб-сторінку
+Картинка в форматі jpg webp-->
+    <div>
+        <picture>
+            <source type="image/jpg" srcset="./img/Український_прапор.jpg" media="(min-width: 768px)">
+            <img class="img-jpg" src="./img/Український_прапор.jpg" alt="Прапор України" title="Прапор України">
+        </picture>
+        <picture>
+            <source type="image/webp" srcset="./img/stock-national.webp" media="(min-width: 768px)">
+            <img class="img-webp" src="./img/stock-national.webp" alt="Прапор України" title="Прапор України">
+        </picture>
+    </div>
+    <br>
+
+    <!--зробити весртку таблиці-->
+
+    <table>
+        <caption>Лекції</caption>
+        <tr>
+            <th rowspan="2"><b>Номер лекції</b></th>
+            <th colspan="2"><b>Курси IT</b></th>
+            <th colspan="2"><b>Курси Design</b></th>
+        </tr>
+        <tr>
+            <td>frontend</td>
+            <td>backend</td>
+            <td>web-design</td>
+            <td>3D-design</td>
+        </tr>
+        <tr>
+            <td rowspan="4"></td>
+            <td>Тема 1</td>
+            <td>Тема 1</td>
+            <td rowspan="2">Тема 1</td>
+            <td>Тема 1</td>
+        </tr>
+        <tr>
+            <td>Тема 2</td>
+            <td>Тема 2</td>
+            <td>Тема 2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Тема 3</td>
+            <td>Тема 3</td>
+            <td rowspan="2">Тема 2</td>
+            <td rowspan="2">Тема 3</td>
+        </tr>
+        <tr>
+            <td>Тема 4</td>
+        </tr>
+    </table>
+    <br>
+    
+    <!--зробити весртку списка-->
+
+    <ol type="I">
+        <li>Frontend
+            <ul>Лекція 1
+                <ul type="disc">
+                    <li>Тема 1</li>
+                    <li>Тема 2</li>
+                    <li>Тема 3</li>
+                </ul>
+            </ul>
+            <ul>Лекція 2
+                <ul type="disc">
+                    <li>Тема 1</li>
+                    <li>Тема 2</li>
+                    <li>Тема 3</li>
+                </ul>
+            </ul>
+        </li>
+        <li>Backend
+            <ul>Лекція 1
+                <ul type="disc">
+                    <li>Тема 1</li>
+                    <li>Тема 2</li>
+                    <li>Тема 3</li>
+                </ul>
+            </ul>
+            <ul>Лекція 2
+                <ul type="disc">
+                    <li>Тема 1</li>
+                    <li>Тема 2</li>
+                    <li>Тема 3</li>
+                </ul>
+            </ul>
+        </li>
+    </ol>
+</body>
+
+</html>

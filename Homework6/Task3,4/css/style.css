@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;
+    color: green;
+   }
+span, .text {
+    background-color: rgb(99, 199, 238);
+    text-align: center;
+}
+span {
+    border: 5px solid white;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+}
+.img-one {
+    padding-left: 40vw;
+    padding-right: 40vw;
+    background-color: rgb(233, 225, 115);
+    margin-bottom: 5vh;
+    min-width: 250px;
+}
+div[class="yellow"] {
+    height: 10vh;
+    background-color: yellow;
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    
+}
+.blue {
+    background-color: rgb(99, 199, 238);
+    height: calc(50%+10px);
+    width: calc(100%);    
+ }

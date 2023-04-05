@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Homework4</title>
+</head>
+<body>
+    <form action="">
+        <h2>Registration</h2>
+        <div class="form-name">
+            <label for="firstname">First name</label><br>
+            <input id="firstname" type="text" placeholder="Enter your name">
+        </div>
+        <div class="form-name">
+            <label for="lastname">Last name</label><br>
+            <input id="lastname" type="text" placeholder="Enter your name">
+        </div>
+        <div>
+            <div>Gender</div>
+            <label for="male-check">Male</label>
+            <input type="radio" id="male-check">
+            <label for="female-check">Female</label>
+            <input type="radio" id="female-check">
+        </div>
+        <div class="bithday">
+            <label for="birthday">Birthday</label><br>
+            <input type="date" id="birthday">
+        </div>
+        <div>
+            <div>Whrite about yuorself</div>
+            <textarea name="about" id="" cols="30" rows="10" placeholder="A two words about who are you"></textarea>
+        </div>
+        <select name="Course"  value="Choose a course">
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="webdesign">Web design</option>
+            <option value="3ddesign">3D design</option>
+        </select>
+
+        <div>
+            <label for="">Add a photo</label><br>
+            <input type="button" value="Choose File">
+            <span>No File chown</span>
+        </div>
+
+        <div class="sign-in">
+            <input type="button" value="Sign Up">
+        </div>
+    </form>    
+</body>
+</html>

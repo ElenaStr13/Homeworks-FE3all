@@ -1,0 +1,6 @@
+a[href*="ua/ua/"]{
+color: rgb(101, 197, 101);
+}
+a[href*="ua/en/"] {
+    color: rgb(214, 97, 97);
+}

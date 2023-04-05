@@ -1,0 +1,12 @@
+.ice-cream>div {
+    padding-top: 2vh;
+}
+#v99, #ch99, #st99 {
+    width: 2vw;
+}
+.range, .price-one, .button {
+    padding: 1vh;
+}
+.crypto {
+    margin-top: 3vh;
+}

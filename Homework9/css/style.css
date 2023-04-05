@@ -1,0 +1,351 @@
+/*весь контент*/
+* {
+    margin: 0;
+    font-family: 'Muler';
+}
+.all {
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    height: 800px;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+}
+@font-face {
+    font-family: 'Mullerb';
+    src: url('/fonts/MullerExtraBoldDEMO.woff') format('woff');
+}
+@font-face {
+    font-family: 'Muler';
+    src: url('/fonts/AnyConv.com__MullerThinDEMO.woff2') format('woff2');
+}
+/*меню*/
+.menu {
+    display: flex;
+    padding-top: 5vh;
+    justify-content: space-around;
+}
+
+.menu-text {
+    display: grid;
+    grid-column: 100px 100px 100px;
+    grid-row: 1/1;
+    gap: 2vw;
+}
+ul {
+    list-style-type: none;
+}
+ul>li:first-child {
+    grid-column: 1/2;
+}
+ul>li:nth-child(2) {
+    grid-column: 2/3;
+}
+ul>li:nth-child(3) {
+    grid-column: 3/3;
+}
+
+li>a {
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+div>a {
+    text-decoration: none;
+    color: black;
+}
+
+/*логотип*/
+.logo {
+    display: flex;
+    width: 11vw;
+    margin-left: 7vw;
+}
+
+#logoname,
+.title {
+    color: #46B1DE;
+    font-family: 'Russo one';
+}
+
+/*текст всерелині сайту*/
+h1 {
+    margin-top: 13vh;
+    width: 13vw;
+    margin-left: 7vw;
+    font-family: 'Russo one';
+}
+
+main:first-child {
+    width: 10px;
+    overflow-x: hidden;
+}
+
+/*кнопки*/
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 7vw;
+    font-family: 'Russo one';
+}
+
+main>div:nth-child(3) {
+    font-size: 16px;
+    width: 28vw;
+    font-weight: bold;
+    margin-left: 7vw;
+}
+
+.btn {
+    margin-top: 7vh;
+    margin-left: 5vw;
+}
+
+.btn>a {
+    margin-right: 6vw;
+    margin-left: 4vw;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.btn-tel {
+    color: white;
+    background-color: #46B1DE;
+}
+
+.btn-serv {
+    color: #46B1DE;
+    background-color: white;
+}
+
+.btn>a:hover {
+    color: black;
+}
+
+.btn>a:active {
+    color: yellow;
+}
+
+.btn>a:visited {
+    color: #707a32;
+}
+
+/*картинка дівчини*/
+.lady {
+    position: absolute;
+    top: 8.1vh;
+    right: 5vw;
+}
+
+/*картки внизу посередині*/
+
+.card-all {
+    display: grid;
+    margin-top: 240px;
+    justify-content: center;
+    grid-column: 100px 100px 100px;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    width: 14vw;
+    border: 1px solid black;
+    margin-right: 5vw;
+    background-color: white;
+    z-index: 555;
+}
+
+.card-all>div:nth-child(1) {
+    grid-column: 1/1;
+}
+
+.card-all>div:nth-child(2) {
+    grid-column: 2/2;
+}
+
+.card-all>div:nth-child(3) {
+    grid-column: 3/3;
+}
+
+.number {
+    color: #46B1DE;
+    font-size: 50px;
+    font-family: 'Mullerb';
+}
+
+.card-all div:nth-child(3) {
+    width: 16vw;
+}
+
+/*назва таблиці*/
+.text-title {
+    margin-top: 2vh;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.table-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-all>div:nth-child(2) {
+    margin-bottom: 5vh;
+}
+.tit {
+    font-size: 28px;
+    font-family: 'Russo one';
+    color: #46B1DE;
+}
+/*нижня таблиця на 6 комірок*/
+.table-static {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 2fr;
+    margin-top: 2vh;
+    gap: 20px;
+    background-color: #46B1DE;
+    width: 60%;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    padding: 1vh;
+    margin-bottom: 5vh;
+}
+
+.table-static>div:nth-child(1) {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+
+.table-static>div:nth-child(2) {
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+
+.table-static>div:nth-child(3) {
+    grid-column: 2/2;
+    grid-row: 1/1;
+}
+
+.table-static>div:nth-child(4) {
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+.table-static>div:nth-child(5) {
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+
+.table-static>div:nth-child(6) {
+    grid-column: 3/3;
+    grid-row: 2/2;
+}
+
+.cell {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.blue-text {
+    color: #46B1DE;
+    display: flex;
+}
+
+.text-table {
+    font-size: 18px;
+}
+
+.all-text {
+    display: flex;
+    flex-direction: row;
+}
+/*footer*/
+footer {
+    background: linear-gradient(90deg, rgb(209, 207, 207) 10%, #46B1DE) ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-family: 'Muler';
+}
+
+.dark-logo {
+    color: #224858;
+    font-family: 'Russo one'
+}
+.logo-footer {
+    display: grid;
+    grid-template-columns: 100px 350px;
+    grid-template-rows: 80px repeat(3);
+    grid-column: 1/2;
+    grid-row: 1/1;
+}
+.logo-footer>img {
+    grid-column: 1/1;
+    grid-row: 1/2;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+.logo-footer>div:nth-child(2) {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    align-self: flex-end;
+    text-transform: uppercase;
+    font-size: 30px;
+    justify-self: flex-start;
+}
+.logo-footer>div:nth-child(3) {
+    grid-column: 2/2;
+    grid-row: 2/2;
+    
+    
+}
+.leftpart-footer {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 4fr;
+    margin-right: 30vw;
+}
+.footer-preferences {
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+.footer-menu {
+    grid-column: 1/1;
+    grid-row: 3/3;
+    align-self: center;
+}
+.language {
+    grid-column: 1/1;
+    grid-row: 4/4;
+}
+.hours-work {
+    grid-column: 2/2;
+    grid-row: 3/4;
+}
+.white-text {
+    color: white;
+    margin-top: 5vh;
+    padding: 40px, 0;
+    margin-bottom: 5vh;
+    
+}
+.white-text>div:nth-child(1) {
+    margin-bottom: 3vh;
+}
+.white-text>div:nth-child(2) {
+    margin-bottom: 1vh;
+}
+.icons>img:nth-child(1),
+.icons>img:nth-child(2)  {
+    margin-right: 1vw;
+}

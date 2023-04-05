@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+span {
+    color: rgb(80, 78, 231);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.text-up {
+    border-bottom: 2px solid green;
+}
+.text-down {
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+}
+.img {
+    height: 30vh;
+}
+.img-course {
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.text-title {
+    text-align: center;
+    margin: 1rem;
+    height: 5vh;
+    border-bottom: 2px solid green;
+}
+.course {
+    background-color: blue;
+    color: white;
+    font-size: 24px;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}

@@ -1,0 +1,20 @@
+a {
+ text-decoration: none;
+ color: green;
+}
+p > span[class*="red"] {
+    color: red;
+}
+span [class $="red"] {
+    color: red;
+    text-transform: uppercase;
+}
+p > span {
+    font-weight: bold;
+}
+p > span[class*="green"] {
+    color: green;
+}
+span[class $="blue"] {
+    color: blue;
+}

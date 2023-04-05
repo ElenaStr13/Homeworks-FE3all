@@ -1,0 +1,92 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Sofia';
+    src: url('../fonts/Sofia.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*меню*/
+header {
+    position: absolute;
+    padding: 20px 0;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    margin-bottom: 34px;
+}
+
+.menu-text {
+    display: flex;
+    flex-direction: row;
+    margin-right: 81px;   
+}
+
+ul {
+    list-style-type: none;
+}
+
+li>a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    margin-left: 80px;
+}
+
+.logo-text,
+#logoname {
+    font-family: 'Sofia';
+    color: #46B1DE;
+}
+
+#logoname {
+    text-transform: uppercase;
+    font-size: 38px;
+    text-shadow: #000 0px 4px 4px;
+}
+
+#phone {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+#phone::before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/-phone-in-talk_90490\ 4.png');
+    background-size: contain;
+    top: 5px;
+    left: -30px;
+    height: 30px;
+    width: 30px;
+}
+
+@media(max-width: 480px) {
+    #logoname {
+        font-size: 27px;
+        text-shadow: #000 0px 1px 1px;
+}
+}
