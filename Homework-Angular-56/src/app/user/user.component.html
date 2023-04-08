@@ -1,0 +1,20 @@
+<div [ngClass]="{online: offOnline}" class="wrapper">
+    <div class="body">
+        <div class="picture">
+            <img src="{{url}}" alt="photo">
+
+            <div *ngIf="offOnline; else offline" >
+                <p class="online-text">Online</p>
+            </div>
+            <ng-template #offline>
+                <p class="offline-text">Offline</p>
+            </ng-template>
+
+        </div>
+        <div class="user-data">
+            <h2>{{name }}</h2>
+            <div class="post-text">{{status}}</div>
+        </div>
+    </div>
+    <button class="network" (click)="offOnline = !offOnline">{{offOnline ? "Offline" : "Online"}}</button>
+</div>
