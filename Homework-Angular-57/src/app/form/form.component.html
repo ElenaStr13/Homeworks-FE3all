@@ -1,0 +1,15 @@
+<div class="body">
+    <div class="picture">
+        <img [src]="imagePreview"
+        *ngIf = "imagePreview">
+      </div>
+      <div>
+        <!-- <img class="picture" src="{{file.name}}"> -->
+        <div>{{file.name}}</div>
+        <h2>{{name}}</h2>
+        <div class="form-text">{{status}}</div>
+        <p>This post contains {{charseAmount}} characters</p>
+      </div>  
+    
+</div>
+<!--  -->

@@ -1,0 +1,13 @@
+<div class="body">
+  <input type="text" placeholder="Name" [value]="nameInputValue" (input)="onName($event)" #name>
+  <textarea type="text" placeholder="Status" [value]="statusInputValue" (input)="onStatus($event)" #status></textarea>
+  <label for="files" class="avatar-upload">Avatar URL</label>
+  <input id="files" style="visibility:hidden;" class="dn" #input
+   name="userfile"
+    accept="image/*"
+     type="file"
+     (change)="onFileUpload($event)">
+  <button type="button" (click)="addNewUser(name.value, status.value, file)">Add User</button>
+</div>
+
+<!-- , triggerClick() -->

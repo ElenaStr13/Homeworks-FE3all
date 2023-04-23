@@ -1,0 +1,85 @@
+.body{
+    min-width: 400px;
+    max-width: 500px;
+    max-height: fit-content;
+    padding: 10px 20px 5px 20px;
+    margin: 0 auto 30px auto;
+    background-color: aliceblue;
+    border: 3px solid #ccc;
+    display: flex;
+    flex-direction: row;
+}
+h2{
+    margin-bottom: 10px;
+}
+
+.form-text{
+    line-height: 24px;
+    margin-bottom: 20px;
+    word-break: break-all;
+
+}
+p{
+    font-style: italic;
+}
+.picture {
+    height: 100px;
+}
+// .picture{
+//     position: relative;
+//     width: 300px;
+//     height: 200px;
+//     margin: 0 auto;
+//     img {
+//     position: relative;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: fill;
+//     }
+// }
+
+.picture {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+
+    img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            height: calc(100% + 10px);
+            width: 100%;
+            background-color: rgb(230, 230, 230);
+            border-radius: 5px;
+        }
+
+        &:after {
+            content: "Image not found" attr(alt);
+            display: block;
+            font-size: 16px;
+            font-style: normal;
+            font-family: FontAwesome;
+            color: rgb(100, 100, 100);
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

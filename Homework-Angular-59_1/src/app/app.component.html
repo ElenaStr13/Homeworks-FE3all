@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <form (ngSubmit)="submit(user)" #user="ngForm">
+        <div class="form-item">
+            <label for="login">Login</label>
+            <input placeholder="Your Login..." name="login" #login='ngModel' ngModel required minlength="2"
+                pattern="[a-z A-Z 0-9]+$" pattern="^\S*$">
+            <p *ngIf="login.invalid && login.touched && login.errors?.['required']">The field must not be empty</p>
+            <p *ngIf="login.invalid && login.touched && login.errors?.['minlength']">
+                The login must contain more than {{login.errors?.['minlength']['requiredLength']}} characters.
+            </p>
+            <p *ngIf="login.invalid && login.touched && login.errors?.['pattern']">
+                Only latin letters and numbers are allowed without spacebar</p>
+        </div>
+        <div class="form-item">
+            <label for="email">Email</label>
+            <input id="email" placeholder="Your email..." name="email" #email='ngModel'ngModel required email
+            pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{3,}$">
+            <p *ngIf="email.invalid && email.touched && email.errors?.['required']">The field must not be empty</p>
+            <p *ngIf="email.invalid && email.touched && email.errors?.['pattern']">Enter correct email</p>
+        </div>
+        <div class="form-item">
+            <label for="password">Password</label>
+            <input id="password" placeholder="Your password..." name="password" #password='ngModel' ngModel minlength="7">
+            <p *ngIf="password.invalid && password.touched && password.errors?.['required']">The field must not be empty</p>
+            <p *ngIf="password.invalid && password.touched && password.errors?.['minlength']">
+                The password must contain more than {{password.errors?.['minlength']['requiredLength']}} characters.
+            </p>            
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
