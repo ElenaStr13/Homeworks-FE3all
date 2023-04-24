@@ -8,7 +8,9 @@ import {UsersService} from '../app/service/users.service';
   providers: [UsersService],
 })
 export class AppComponent {
-  constructor(public usersService: UsersService) {}
+  constructor(public UsersService: UsersService) {
+
+  }
 //   users = [
 //     {name: "Mike", status: "I'm learning angular", url: "https://i.pravatar.cc/150?img=12", id:1,},
 //     {name: "Nikola", status: "Playing piano", url: "https://i.pravatar.cc/150?img=7", id:2,},
