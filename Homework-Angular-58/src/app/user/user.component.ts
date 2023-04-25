@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import {UsersService} from '../service/users.service'
+import { Component, Input, EventEmitter, Output } from '@angular/core';
+import {UsersService} from '../service/users.service';
 
 @Component({
   selector: 'app-user',
@@ -12,4 +12,14 @@ export class UserComponent {
   @Input() status = ''
   @Input() img = ''
   constructor(public UsersService: UsersService){}
+
+  // addNewName(event: any){
+  //   this.name = event.target.value;
+  // }
+
+  // NameInputValue = '';
+
+  // onName(event: any) {
+  //   this.NameInputValue = event.target.value;
+  // }
 }
