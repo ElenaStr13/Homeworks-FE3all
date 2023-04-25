@@ -8,4 +8,5 @@ import { Component, Output, EventEmitter} from '@angular/core';
 export class PopUpComponent {
  
   @Output() close = new EventEmitter;
+  
 }

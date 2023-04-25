@@ -1,6 +1,6 @@
 import { Component, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
 import { PopUpComponent } from './pop-up/pop-up.component';
-import {UsersService} from '../app/service/users.service';
+import { UsersService } from '../app/service/users.service';
 
 @Component({
   selector: 'app-root',
@@ -10,20 +10,27 @@ import {UsersService} from '../app/service/users.service';
 })
 export class AppComponent {
   constructor(public UsersService: UsersService) { }
-
+  
   //developers = […];
+
+  name = '';
+  addName(newUser: any) {
+    this.name = newUser.name    
+  }
 
   @ViewChild('popUp', { read: ViewContainerRef })
   private viewRef!: ViewContainerRef
   private componentRef!: ComponentRef<PopUpComponent>
 
-showPopUp() {
-  this.viewRef.createComponent(PopUpComponent);
-  this.componentRef.instance.close.subscribe()
+  showPopUp() {
+    this.componentRef = this.viewRef.createComponent(PopUpComponent);
+    console.log(this.viewRef.createComponent(PopUpComponent));
+    this.componentRef.instance.close.subscribe(()=>{this.viewRef.clear()})
+  }
 }
+
 //   name = {name: ''}
 
 // addName(newName: any) {
 //   this.name = newName
 // }
-}

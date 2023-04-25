@@ -5,13 +5,14 @@
         </div>
         <div class="user-data">
             <div class="user-data-item">
-                <h2>{{name}}</h2>
+                <h2>{{name.value}}</h2>
                 <div class="edit-body">
                     <form >
-                    <input type="text" placeholder="Write new name"> 
+                    <input type="text" placeholder="Write new name"
+                    [value]="nameInputValue" (input)="onName($event)" #name> 
                     <!--[(ngModel)]="name" name="name" -->
                     <!-- (input)="onName($event) #name" -->
-                    <button class="network">Edit</button>
+                    <button class="network" (click)="addNewName(name.value)">Edit</button>
                 </form>
                 </div>
             </div>
