@@ -9,14 +9,7 @@ import { UsersService } from '../app/service/users.service';
   providers: [UsersService],
 })
 export class AppComponent {
-  constructor(public UsersService: UsersService) { }
-  
-  //developers = […];
-
-  name = '';
-  addName(newUser: any) {
-    this.name = newUser.name    
-  }
+  constructor(public UsersService: UsersService) { } 
 
   @ViewChild('popUp', { read: ViewContainerRef })
   private viewRef!: ViewContainerRef
@@ -28,9 +21,3 @@ export class AppComponent {
     this.componentRef.instance.close.subscribe(()=>{this.viewRef.clear()})
   }
 }
-
-//   name = {name: ''}
-
-// addName(newName: any) {
-//   this.name = newName
-// }

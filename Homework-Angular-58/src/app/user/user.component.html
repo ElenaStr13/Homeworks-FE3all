@@ -5,22 +5,22 @@
         </div>
         <div class="user-data">
             <div class="user-data-item">
-                <h2>{{name.value}}</h2>
+                <h2>{{name}}</h2>
                 <div class="edit-body">
                     <form >
                     <input type="text" placeholder="Write new name"
-                    [value]="nameInputValue" (input)="onName($event)" #name> 
-                    <!--[(ngModel)]="name" name="name" -->
-                    <!-- (input)="onName($event) #name" -->
-                    <button class="network" (click)="addNewName(name.value)">Edit</button>
+                    [(ngModel)]="nameInputValue" name="name" 
+                    >                 
+                    <button class="network" (click)="addNewName()">Edit</button>                   
                 </form>
                 </div>
             </div>
             <div class="user-data-item">
                 <div class="status-text">{{status}}</div>
                 <div class="edit-body">
-                    <input type="text" placeholder="Write new status">
-                    <button class="network">Edit</button>
+                    <input type="text" placeholder="Write new status"
+                    [(ngModel)]="statusInputValue" name="status">
+                    <button class="network" (click)="addNewStatus()">Edit</button>
                 </div>
             </div>
         </div>
@@ -29,3 +29,4 @@
     <p><b>Group Name:</b><span>Healthy lifestyle</span></p>
 </div>
 </div>
+<!-- [value]="nameInputValue" (input)="onName($event)" #name -->

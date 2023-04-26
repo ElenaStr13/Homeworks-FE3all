@@ -14,29 +14,15 @@ export class UserComponent {
   constructor(public UsersService: UsersService){}
 
  @Output() onUser = new EventEmitter();
-  nameInputValue = '';  
+  nameInputValue = '';
+  statusInputValue = '';
 
-  onName(event: any) {
-    this.nameInputValue = event.target.value;
-    //console.log(this.nameInputValue)
+  addNewName() {
+    this.name = this.nameInputValue;
   }
   
-  addNewName(nameValue: string) {
-    const value = {
-      name:nameValue
-    }   
-    console.log(value.name)
-    this.onUser.emit(value)
-    //this.nameInputValue = '';    
+  addNewStatus(){
+    this.status = this.statusInputValue;
   }
-  
-  // addNewName(event: any){
-  //   this.name = event.target.value;
-  // }
 
-  // NameInputValue = '';
-
-  // onName(event: any) {
-  //   this.NameInputValue = event.target.value;
-  // }
 }
