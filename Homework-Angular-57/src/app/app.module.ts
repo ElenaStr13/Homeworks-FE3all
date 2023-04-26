@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/formcomponent';
 import { AddUserComponent } from './add-user/add-user.component';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AddUserComponent } from './add-user/add-user.component';
     AddUserComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

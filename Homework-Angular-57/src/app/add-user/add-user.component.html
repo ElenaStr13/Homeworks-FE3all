@@ -1,10 +1,21 @@
 <div class="body">
   <input type="text" placeholder="Name" [value]="nameInputValue" (input)="onName($event)" #name>
-  <textarea type="text" placeholder="Status" [value]="statusInputValue" (input)="onStatus($event)" onkeyup="this.value=this.value.substring(0,50);" #status></textarea>
+  <textarea type="text" 
+  placeholder="Status" 
+  [value]="statusInputValue" 
+  (input)="onStatus($event)" 
+  onkeyup="this.value=this.value.substring(0,50);" 
+  #status></textarea>
+
   <label for="avatar-input-file" class="avatar-upload">Avatar URL</label>
-  <input type="file" id="avatar-input-file" accept="image/*" #image/>
-  <button type="button" (click)="addNewUser(name.value, status.value, file)">Add User</button>
-</div>
+  <input type="file" id="avatar-input-file" accept="image/*" #image />
+  <mat-icon class="icon"></mat-icon>
+  <!-- (change) = "onFileChange( $event )" -->
+  <!-- fontIcon="edit" -->
+
+  <button type="button" (click)="addNewUser(name.value, status.value)" >Add User</button>
+
+  </div>
 
 <!-- , triggerClick() -->
 <!-- (change)="onFileChange($event)" -->

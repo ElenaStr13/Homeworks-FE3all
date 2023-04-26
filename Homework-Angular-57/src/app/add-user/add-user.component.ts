@@ -9,7 +9,7 @@ import { Component, EventEmitter, Output, ViewChild, ElementRef, NgModule } from
 export class AddUserComponent {
 
   @Output() onUser = new EventEmitter();
-  
+
   nameInputValue = '';
   statusInputValue = '';
   image = File;
@@ -17,7 +17,7 @@ export class AddUserComponent {
   //file: any;
   file: string = '';
 
- // @ViewChild('input') inputRef: ElementRef
+  // @ViewChild('input') inputRef: ElementRef
   onName(event: any) {
     this.nameInputValue = event.target.value;
   }
@@ -25,51 +25,50 @@ export class AddUserComponent {
     this.statusInputValue = event.target.value;
   }
 
-  onFileUpload(event: any) {
-    const file = event.target.files[0];
-    // this.file = event.target.files[0]
-    this.image = file
-
-  //   const reader = new FileReader()
-   // reader.onload = () => {
-  //    this.imagePreview = reader.result;
-  //  }
-  //  reader.readAsDataURL(this.file)
-  //  console.log(this.file)
+  onFileChange(event: any) {
+    const files = event.target.files as FileList;
+    //console.log(files)
+    if (files.length > 0) {
+      const _file = URL.createObjectURL(files[0]);
+      this.file = _file;
+      this.resetInput();
+    }
+    
   }
 
-//   onFileChange(event: any) {
-//     const files = event.target.files as FileList;
-
-//     if (files.length > 0) {
-//       const _file = URL.createObjectURL(files[0]);
-//       this.file = _file;
-//       this.resetInput();   
-//     }
-  
-//  }
-
- resetInput(){
-  const input = document.getElementById('avatar-input-file') as HTMLInputElement;
-  if(input){
-    input.value = "";
+  resetInput() {
+    const input = document.getElementById('avatar-input-file') as HTMLInputElement;
+    if (input) {
+      input.value = "";
+    }
   }
-}
 
-  addNewUser(nameValue: string, statusValue: string, file: any) {
+  addNewUser(nameValue: string, statusValue: string) {
+    
     const value = {
       name: nameValue,
-      status: statusValue,
-     // file: file
+      status: statusValue
     }
-    console.log(this.file)
+    //console.log(this.file)
     this.onUser.emit(value)
     this.nameInputValue = '';
     this.statusInputValue = '';
-   // this.file = null;
+    
   }
   // triggerClick() {
   //   this.inputRef.nativeElement.click()
   // }
 
 }
+//onFileUpload(event: any) {
+  //const file = event.target.files[0];
+  // this.file = event.target.files[0]
+ // this.image = file
+
+//   const reader = new FileReader()
+ // reader.onload = () => {
+//    this.imagePreview = reader.result;
+//  }
+//  reader.readAsDataURL(this.file)
+//  console.log(this.file)
+//}
