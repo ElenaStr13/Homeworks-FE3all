@@ -7,7 +7,7 @@ import { HeaderComponent } from '../header/header.component'
   styleUrls: ['./pop-up.component.scss']
 })
 export class PopUpComponent {
-  group = '';
+  group = 'Healthy lifestyle';
   @Output() close = new EventEmitter;
 
 

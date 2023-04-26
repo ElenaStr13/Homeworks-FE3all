@@ -21,7 +21,7 @@ export class AppComponent {
   showPopUp() {
     this.componentRef = this.viewRef.createComponent(PopUpComponent);
     
-    //this.componentRef.instance.group = this.group
+    //this.componentRef.instance.group = this.HeaderComponent.group
     this.componentRef.instance.close.subscribe(()=>{this.viewRef.clear()})
   }
 }
