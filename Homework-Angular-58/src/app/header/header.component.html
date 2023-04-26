@@ -1,7 +1,11 @@
 <div class="body">
-    <h1> <b>User group: </b><span>{{group.value}}</span></h1>
+    <h1> <b>User group: </b><span>{{group}}</span></h1>
     <div class="edit-body">
-        <input type="text" placeholder="Write new group name" [value]="groupInputValue" (input)="onGroup($event)" #group>
-        <button class="network" (click)="addNewGroup(group.value)">Edit</button>
+        <input type="text" 
+        placeholder="Write new group name" 
+        [(ngModel)]="groupInputValue" 
+        name="group">
+        <button class="network" 
+        (click)="addNewGroup()">Edit</button>
     </div>
 </div>

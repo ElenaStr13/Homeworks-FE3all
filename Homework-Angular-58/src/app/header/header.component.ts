@@ -9,20 +9,13 @@ export class HeaderComponent {
 
   @Input() group = ''
 
-  @Output() onUser = new EventEmitter();
+  //@Output() onUser = new EventEmitter();
+  
   groupInputValue = '';
 
-  onGroup(event: any) {
-    this.groupInputValue = event.target.value;
-  }
-
-  addNewGroup(groupValue: string) {
-    const value = {
-      name: groupValue      
-    }
-   
-    this.onUser.emit(value)
-    this.groupInputValue = '';   
-  }
+  addNewGroup() {
+    this.group = this.groupInputValue;
+  }  
+  
 
 }
