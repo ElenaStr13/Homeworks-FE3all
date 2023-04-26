@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild, ElementRef, NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-add-user',
@@ -8,12 +9,13 @@ import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular
 export class AddUserComponent {
 
   @Output() onUser = new EventEmitter();
-  //user = {name: "Mike", status: "I`m learning Angular", avatar: "./url"}
+  
   nameInputValue = '';
   statusInputValue = '';
   image = File;
-  imagePreview: any;
-  file: any;
+  //imagePreview: any;
+  //file: any;
+  file: string = '';
 
  // @ViewChild('input') inputRef: ElementRef
   onName(event: any) {
@@ -28,25 +30,43 @@ export class AddUserComponent {
     // this.file = event.target.files[0]
     this.image = file
 
-    const reader = new FileReader()
-    reader.onload = () => {
-      this.imagePreview = reader.result;
-    }
-    reader.readAsDataURL(this.file)
-    console.log(this.file)
+  //   const reader = new FileReader()
+   // reader.onload = () => {
+  //    this.imagePreview = reader.result;
+  //  }
+  //  reader.readAsDataURL(this.file)
+  //  console.log(this.file)
   }
+
+//   onFileChange(event: any) {
+//     const files = event.target.files as FileList;
+
+//     if (files.length > 0) {
+//       const _file = URL.createObjectURL(files[0]);
+//       this.file = _file;
+//       this.resetInput();   
+//     }
+  
+//  }
+
+ resetInput(){
+  const input = document.getElementById('avatar-input-file') as HTMLInputElement;
+  if(input){
+    input.value = "";
+  }
+}
 
   addNewUser(nameValue: string, statusValue: string, file: any) {
     const value = {
       name: nameValue,
       status: statusValue,
-      file: file
+     // file: file
     }
     console.log(this.file)
     this.onUser.emit(value)
     this.nameInputValue = '';
     this.statusInputValue = '';
-    this.file = null;
+   // this.file = null;
   }
   // triggerClick() {
   //   this.inputRef.nativeElement.click()
