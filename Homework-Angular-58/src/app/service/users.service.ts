@@ -13,5 +13,7 @@ export class UsersService {
     {name: "Bob", status: "Translations from Chinese", url: "https://i.pravatar.cc/150?img=11", id:3,},
     {name: "Anna ", status: "Pretty girl", url: "https://i.pravatar.cc/150?img=1", id:4,},
 ];
-
+calculateUsers() {
+  return this.users.length;
+}
 }

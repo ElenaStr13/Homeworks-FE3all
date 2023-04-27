@@ -12,7 +12,7 @@ export class AddUserComponent {
 
   nameInputValue = '';
   statusInputValue = '';
-  image = File;
+  image : any;
   //imagePreview: any;
   //file: any;
   file: string = '';
@@ -58,7 +58,7 @@ export class AddUserComponent {
   // triggerClick() {
   //   this.inputRef.nativeElement.click()
   // }
-
+//image = '../../author2.webp'
 }
 //onFileUpload(event: any) {
   //const file = event.target.files[0];

@@ -11,11 +11,15 @@ export class FormComponent {
 @Input() file = File
 @Input() imagePreview = ''
 @Input() charseAmount = 0;
+@Input() image = ''
 
 RemoveUser() {
   this.name = '';
   this.status = '';
   //this.file = undefined;
   this.charseAmount = 0;
+  this.image = '';
 }
+
+//image:any = this.image;
 }
