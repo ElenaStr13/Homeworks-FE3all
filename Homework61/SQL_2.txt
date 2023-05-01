@@ -1,0 +1,9 @@
+2. SELECT category, COUNT(title) FROM product GROUP BY category;
+
+3. SELECT DISTINCT category, COUNT(brand) FROM product GROUP BY category;
+
+4. SELECT name, COUNT(productID) AS QUANTITY from customer group by name;
+
+5. SELECT name, COUNT(productID) AS QUANTITY from customer group by name ORDER BY COUNT(productID) DESC;
+
+6. SELECT category, title, price FROM customer JOIN product ON customer.productID=product.id ORDER BY category, price DESC;

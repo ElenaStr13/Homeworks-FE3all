@@ -1,0 +1,26 @@
+1.create:
+CREATE DATABASE shop;
+create table product(PRODUCT VARCHAR(50), Price VARCHAR(10), rating VARCHAR(10), category VARCHAR(30), brand VARCHAR(40));
+2.ALTER TABLE phones ADD id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY;
+insert into product(PRODUCT, Price, rating, category, brand) Values('iPhone 9', '549', '4.69', 'smartphones', 'Apple');
+insert into product(PRODUCT, Price, rating, category, brand) Values('iPhone X', '899', '4.44', 'smartphones', 'Apple');
+insert into product(PRODUCT, Price, rating, category, brand) Values('Samsung Universe 9', '1249', '4.09', 'smartphones', 'Samsung');
+insert into product(PRODUCT, Price, rating, category, brand) Values('OPPO F19', '280', '4.3', 'smartphones', 'OPPO');
+insert into product(PRODUCT, Price, rating, category, brand) Values('Huawei P30', '499', '4.09', 'smartphones', 'Huawei');
+insert into product(PRODUCT, Price, rating, category, brand) Values('MacBook Pro', '1149', '4.57', 'laptops', 'Apple');
+insert into product(PRODUCT, Price, rating, category, brand) Values('Samsung Galaxy Book', '1499', '4.25', 'laptops', 'Samsung');
+insert into product(PRODUCT, Price, rating, category, brand) Values('Microsoft Surface Laptop 4', '1499', '4.43', 'laptops', 'Microsoft Surface');
+insert into product(PRODUCT, Price, rating, category, brand) Values('Infinix INBOOK', '1099', '4.54', 'laptops', 'Infinix');
+ insert into product(PRODUCT, Price, rating, category, brand) Values('HP Pavilion 15-DK1056WM', '1099', '4.43', 'laptops', 'HP Pavilion');
+SELECT * FROM product;
+
+select:
+3.SELECT PRODUCT, Price, brand FROM product WHERE brand="Apple";
+
+SELECT PRODUCT, Price FROM product WHERE Price<"1000";
+
+SELECT PRODUCT, Price FROM product WHERE "500"<Price<"1500";
+
+SELECT PRODUCT, Price, rating, brand FROM product WHERE brand IN ("Apple", "Samsung", "Huawei");
+
+SELECT PRODUCT, category FROM product WHERE  PRODUCT LIKE "Samsung%";
